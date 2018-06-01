@@ -14,6 +14,7 @@ setup(
     version="0.1.0",
     description="Improved TestCase class",
     long_description=read("README.md"),
+    long_description_content_type="text/markdown",
     author="Sebastian Rittau",
     author_email="srittau@rittau.biz",
     url="https://github.com/srittau/python-dectest",
