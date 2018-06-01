@@ -1,5 +1,11 @@
 # Improved TestCase Class
 
+
+[![License](https://img.shields.io/pypi/l/dectest.svg)](https://pypi.python.org/pypi/dectest/)
+[![Github](https://img.shields.io/github/release/srittau/python-dectest/all.svg)](https://github.com/srittau/python-dectest/releases/)
+[![pypi](https://img.shields.io/pypi/v/dectest.svg)](https://pypi.python.org/pypi/dectest/)
+[![Travis CI](https://travis-ci.org/srittau/python-dectest.svg?branch=master)](https://travis-ci.org/srittau/python-dectest)
+
 `dectest.TestCase` is a drop-in replacement for `unittest.TestCase` with
 a few added features.
 
