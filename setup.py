@@ -11,7 +11,7 @@ def read(fname):
 
 setup(
     name="dectest",
-    version="0.1.0",
+    version="0.1.1",
     description="Improved TestCase class",
     long_description=read("README.md"),
     long_description_content_type="text/markdown",
