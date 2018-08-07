@@ -78,7 +78,7 @@ class MySubTest(MySuperTest):
 ## Patch Support
 
 `dectest.TestCase` has a `patch()` method to install a mock using
-`unittest.mock.patch()`. This mock is cleaned after during test
+`unittest.mock.patch()`. This patch is removed during test
 teardown:
 
 ```python
