@@ -11,7 +11,7 @@ def read(fname):
 
 setup(
     name="dectest",
-    version="0.1.2",
+    version="1.0.0",
     description="Improved TestCase class",
     long_description=read("README.md"),
     long_description_content_type="text/markdown",
@@ -24,7 +24,7 @@ setup(
     python_requires=">=3.5",
     license="MIT",
     classifiers=[
-        "Development Status :: 4 - Beta",
+        "Development Status :: 5 - Production/Stable",
         "Intended Audience :: Developers",
         "License :: OSI Approved :: MIT License",
         "Programming Language :: Python :: 3",
