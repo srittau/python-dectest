@@ -18,11 +18,14 @@ def _is_test_method(method: Any) -> bool:
 
 
 class _TestCaseMeta(type):
-    def __new__(mcs: Type[_C], name: str, bases: Tuple[type, ...],
-                dct: Dict[str, Any]) -> _C:
-        test_methods = [(attr_name, method)
-                        for attr_name, method in dct.items()
-                        if _is_test_method(method)]
+    def __new__(
+        mcs: Type[_C], name: str, bases: Tuple[type, ...], dct: Dict[str, Any]
+    ) -> _C:
+        test_methods = [
+            (attr_name, method)
+            for attr_name, method in dct.items()
+            if _is_test_method(method)
+        ]
         for attr_name, method in test_methods:
             del dct[attr_name]
             dct["test__" + attr_name] = method
@@ -58,7 +61,8 @@ class TestCase(unittest.TestCase, metaclass=_TestCaseMeta):
 
         def get_methods_in_class(class_: type) -> List[TestMethod]:
             return [
-                value for name, value in vars(class_).items()
+                value
+                for name, value in vars(class_).items()
                 if callable(value) and hasattr(value, attr_name)
             ]
 
