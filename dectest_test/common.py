@@ -17,11 +17,19 @@ class TestCaseTestBase(TestCase):
         suite.run(self.result)
 
     def assert_test_result(
-        self, success: int = 0, failure: int = 0, error: int = 0
+        self,
+        success: int = 0,
+        failure: int = 0,
+        error: int = 0,
+        skipped: int = 0,
     ) -> None:
         failure_count = len(self.result.failures)
         error_count = len(self.result.errors)
-        success_count = self.result.testsRun - failure_count - error_count
+        skip_count = len(self.result.skipped)
+        success_count = (
+            self.result.testsRun - failure_count - error_count - skip_count
+        )
         assert_equal(
-            (success, failure, error), (success_count, failure_count, error_count)
+            (success, failure, error, skipped),
+            (success_count, failure_count, error_count, skip_count),
         )

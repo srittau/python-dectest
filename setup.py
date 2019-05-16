@@ -11,7 +11,7 @@ def read(fname):
 
 setup(
     name="dectest",
-    version="1.0.0",
+    version="1.1.0",
     description="Improved TestCase class",
     long_description=read("README.md"),
     long_description_content_type="text/markdown",
@@ -33,5 +33,5 @@ setup(
         "Programming Language :: Python :: 3.7",
         "Topic :: Software Development :: Quality Assurance",
         "Topic :: Software Development :: Testing",
-    ]
+    ],
 )

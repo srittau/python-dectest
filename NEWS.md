@@ -1,3 +1,9 @@
+# News in version 1.1.0
+
+## API Additions
+
+* Add `@skip`, `@skip_if`, and `@skip_unless` decorators.
+
 # News in version 1.0.0
 
 No changes.

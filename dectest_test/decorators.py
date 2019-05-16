@@ -1,6 +1,6 @@
 from asserts import fail, assert_true
 
-from dectest import TestCase, test, before
+from dectest import TestCase, test, before, skip, skip_if, skip_unless
 
 from dectest_test.common import TestCaseTestBase
 
@@ -54,3 +54,53 @@ class DecoratorTest(TestCaseTestBase):
 
         self.run_test_class(MyTestCase)
         self.assert_test_result(failure=1)
+
+    @test
+    def decorator__skip(self) -> None:
+        class MyTestCase(TestCase):
+            @skip("skip reason")
+            def foo(self) -> None:
+                pass
+
+        self.run_test_class(MyTestCase)
+        self.assert_test_result(skipped=1)
+
+    @test
+    def decorator__skip_if__true(self) -> None:
+        class MyTestCase(TestCase):
+            @skip_if(True, "skip reason")
+            def foo(self) -> None:
+                pass
+
+        self.run_test_class(MyTestCase)
+        self.assert_test_result(skipped=1)
+
+    @test
+    def decorator__skip_if__false(self) -> None:
+        class MyTestCase(TestCase):
+            @skip_if(False, "skip reason")
+            def foo(self) -> None:
+                pass
+
+        self.run_test_class(MyTestCase)
+        self.assert_test_result(success=1)
+
+    @test
+    def decorator__skip_unless__true(self) -> None:
+        class MyTestCase(TestCase):
+            @skip_unless(True, "skip reason")
+            def foo(self) -> None:
+                pass
+
+        self.run_test_class(MyTestCase)
+        self.assert_test_result(success=1)
+
+    @test
+    def decorator__skip_unless__false(self) -> None:
+        class MyTestCase(TestCase):
+            @skip_unless(False, "skip reason")
+            def foo(self) -> None:
+                pass
+
+        self.run_test_class(MyTestCase)
+        self.assert_test_result(skipped=1)
