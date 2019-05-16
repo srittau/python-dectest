@@ -3,7 +3,7 @@ Custom test case class to replace unittest's TestCase class.
 """
 
 import unittest
-from typing import cast, Any, List, Type, Dict, Tuple, TypeVar
+from typing import Any, List, Type, Dict, Tuple, TypeVar
 from unittest.mock import patch
 
 from ._types import TestMethod
@@ -26,7 +26,7 @@ class _TestCaseMeta(type):
         for attr_name, method in test_methods:
             del dct[attr_name]
             dct["test__" + attr_name] = method
-        return cast(_C, super().__new__(mcs, name, bases, dct))
+        return super().__new__(mcs, name, bases, dct)  # type: ignore
 
 
 class TestCase(unittest.TestCase, metaclass=_TestCaseMeta):
