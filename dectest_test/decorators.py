@@ -1,4 +1,4 @@
-from asserts import fail, assert_true
+from asserts import fail, assert_true, assert_raises
 
 from dectest import TestCase, test, before, skip, skip_if, skip_unless
 
@@ -64,6 +64,15 @@ class DecoratorTest(TestCaseTestBase):
 
         self.run_test_class(MyTestCase)
         self.assert_test_result(skipped=1)
+
+    @test
+    def decorator__skip__without_arguments(self) -> None:
+        with assert_raises(TypeError):
+
+            class MyTestCase(TestCase):
+                @skip  # type: ignore
+                def foo(self) -> None:
+                    pass
 
     @test
     def decorator__skip_if__true(self) -> None:

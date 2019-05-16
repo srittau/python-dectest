@@ -39,6 +39,9 @@ def skip(reason: str) -> Callable[[_F], _F]:
     function as a test.
     """
 
+    if not isinstance(reason, str):
+        raise TypeError("first argument to @skip must be a reason string")
+
     def decorate(method: _F) -> _F:
         return unittest.skip(reason)(test(method))
 
