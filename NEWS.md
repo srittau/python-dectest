@@ -1,3 +1,10 @@
+# News in version 1.1.1
+
+## Improvements
+
+* Explicitly re-export imports in `__init__.py`. This allows
+  mypy to be run with `--no-implicit-reexport`.
+
 # News in version 1.1.0
 
 ## API Additions
