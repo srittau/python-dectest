@@ -2,6 +2,7 @@
 
 
 [![License](https://img.shields.io/pypi/l/dectest.svg)](https://pypi.python.org/pypi/dectest/)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/dectest)](https://pypi.python.org/pypi/dectest/)
 [![Github](https://img.shields.io/github/release/srittau/python-dectest/all.svg)](https://github.com/srittau/python-dectest/releases/)
 [![pypi](https://img.shields.io/pypi/v/dectest.svg)](https://pypi.python.org/pypi/dectest/)
 [![Travis CI](https://travis-ci.org/srittau/python-dectest.svg?branch=master)](https://travis-ci.org/srittau/python-dectest)
