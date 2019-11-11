@@ -1,6 +1,6 @@
 # Direct dependencies
 
-asserts==0.9.1
+asserts==0.10.0
 mypy==0.740
 wheel==0.33.6
 

@@ -20,7 +20,7 @@ setup(
     url="https://github.com/srittau/python-dectest",
     packages=["dectest"],
     package_data={"dectest": ["py.typed"]},
-    tests_require=["asserts >= 0.8.0, <0.9"],
+    tests_require=["asserts >= 0.8.0, < 0.11"],
     python_requires=">=3.5",
     license="MIT",
     classifiers=[
