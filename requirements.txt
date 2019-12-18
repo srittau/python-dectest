@@ -1,7 +1,7 @@
 # Direct dependencies
 
 asserts==0.10.0
-mypy==0.750
+mypy==0.760
 wheel==0.33.6
 
 # Transitive dependencies
