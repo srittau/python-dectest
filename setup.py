@@ -11,7 +11,7 @@ def read(fname):
 
 setup(
     name="dectest",
-    version="1.1.1",
+    version="2.0.0",
     description="Improved TestCase class",
     long_description=read("README.md"),
     long_description_content_type="text/markdown",
@@ -21,15 +21,13 @@ setup(
     packages=["dectest"],
     package_data={"dectest": ["py.typed"]},
     tests_require=["asserts >= 0.8.0, < 0.12"],
-    python_requires=">=3.5",
+    python_requires=">=3.7"
     license="MIT",
     classifiers=[
         "Development Status :: 5 - Production/Stable",
         "Intended Audience :: Developers",
         "License :: OSI Approved :: MIT License",
         "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3.5",
-        "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
