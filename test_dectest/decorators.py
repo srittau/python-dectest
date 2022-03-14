@@ -2,7 +2,7 @@ from asserts import fail, assert_true, assert_raises
 
 from dectest import TestCase, test, before, skip, skip_if, skip_unless
 
-from dectest_test.common import TestCaseTestBase
+from test_dectest.common import TestCaseTestBase
 
 
 class DecoratorTest(TestCaseTestBase):

@@ -4,7 +4,7 @@ from asserts import assert_equal
 
 from dectest import TestCase, test
 
-from dectest_test.common import TestCaseTestBase
+from test_dectest.common import TestCaseTestBase
 
 
 class PatchTest(TestCaseTestBase):
