@@ -26,6 +26,6 @@ jobs:
     - name: Type checking with mypy
       run: |
         poetry run mypy --version
-        poetry run mypy dectest dectest_test
+        poetry run mypy dectest test_dectest
     - name: Test with unittest
       run: poetry run python -Wall -m unittest discover -t . -s test_dectest -p "*.py"
